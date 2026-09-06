@@ -1,0 +1,2 @@
+import {useEffect,useState} from 'react';
+export default function useTMDB(fn,deps=[]){const [state,setState]=useState({data:null,loading:true,error:null}); useEffect(()=>{const ctl=new AbortController();let live=true;setState({data:null,loading:true,error:null}); Promise.resolve().then(()=>fn(ctl.signal)).then(r=>{if(live)setState({data:r.data,loading:false,error:null})}).catch(e=>{if(live&&!['CanceledError','ERR_CANCELED'].includes(e?.code)&&e?.name!=='CanceledError')setState({data:null,loading:false,error:e})});return()=>{live=false;ctl.abort()}},deps);return state}
