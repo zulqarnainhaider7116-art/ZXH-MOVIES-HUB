@@ -1,0 +1,1 @@
+export const titleOf=i=>i?.title||i?.name||'Untitled'; export const yearOf=i=>(i?.release_date||i?.first_air_date||'').slice(0,4); export const ratingOf=i=>Number.isFinite(i?.vote_average)?i.vote_average.toFixed(1):null; export const mediaTypeOf=i=>i?.media_type||(i?.first_air_date?'tv':'movie'); export const runtime=v=>v?`${Math.floor(v/60)}h ${v%60}m`:'';
