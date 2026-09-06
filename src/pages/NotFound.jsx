@@ -1,0 +1,1 @@
+import React from'react';import{Link}from'react-router-dom';export default function NotFound(){return <div className="notfound"><span>404</span><h1>Scene not found.</h1><p>The page you requested does not exist.</p><Link className="btn primary" to="/">Back home</Link></div>}
