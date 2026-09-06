@@ -1,0 +1,1 @@
+import React from'react';import Navbar from'../components/Navbar';import BottomNav from'../components/BottomNav';export default function MainLayout({children}){return <><Navbar/><main className="main">{children}</main><BottomNav/></>}
