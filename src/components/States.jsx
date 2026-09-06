@@ -1,0 +1,1 @@
+import React from'react';export const ErrorState=({text='Unable to load content.'})=><div className="state"><strong>Something went wrong</strong><p>{text}</p></div>;export const EmptyState=({text='No content available.'})=><div className="state"><strong>Nothing here yet</strong><p>{text}</p></div>;
